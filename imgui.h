@@ -246,6 +246,11 @@ namespace ImGui
     IMGUI_API ImGuiContext* GetCurrentContext();
     IMGUI_API void          SetCurrentContext(ImGuiContext* ctx);
 
+    IMGUI_API void*         GetCurrentWindowContext();
+    IMGUI_API void          SetCurrentWindowContext(void *ctx);
+    IMGUI_API void*         GetCurrentRenderContext();
+    IMGUI_API void          SetCurrentRenderContext(void *ctx);
+
     // Main
     IMGUI_API ImGuiIO&      GetIO();                                    // access the IO structure (mouse/keyboard/gamepad inputs, time, various configuration options/flags)
     IMGUI_API ImGuiStyle&   GetStyle();                                 // access the Style structure (colors, sizes). Always use PushStyleCol(), PushStyleVar() to modify style mid-frame!

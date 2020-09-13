@@ -8110,4 +8110,27 @@ void ImGui::Columns(int columns_count, const char* id, bool border)
 
 //-------------------------------------------------------------------------
 
+//-------------------------------------------------------------------------
+
+void* ImGui::GetCurrentRenderContext()
+{
+    return GetCurrentContext()->RenderContext;
+}
+
+void ImGui::SetCurrentRenderContext(void *ctx)
+{
+    GetCurrentContext()->RenderContext = ctx;
+}
+
+void* ImGui::GetCurrentWindowContext()
+{
+    return GetCurrentContext()->WindowContext;
+}
+
+void ImGui::SetCurrentWindowContext(void *ctx)
+{
+    GetCurrentContext()->WindowContext = ctx;
+}
+
+
 #endif // #ifndef IMGUI_DISABLE
